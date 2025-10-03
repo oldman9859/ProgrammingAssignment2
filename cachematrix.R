@@ -40,7 +40,7 @@ cacheSolve <- function(x, ...) {
   
   matdata <- x$get()
   ## get inverse result
-  cat("calculating the matrix inverse, show this message at the 1st run")
+    cat("calculating the matrix inverse, show this message at the 1st run\n")
   invobj <- solve(matdata, ...)
   x$setInverse(invobj)
   invobj
@@ -56,4 +56,4 @@ CMA <- makeCacheMatrix(MA)
 cacheSolve(CMA)
 
 ##2nd call - return the same cached version with four decimals
-print(cacheSolve(CMA), digits =4)
+print(cacheSolve(CMA), digits = 4)
